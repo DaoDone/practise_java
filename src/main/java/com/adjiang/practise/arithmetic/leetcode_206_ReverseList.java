@@ -8,6 +8,7 @@ import java.util.Stack;
 /**
  * diffculty:Easy
  * Related Topics 递归 链表
+ * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
  * @author jianad001
  * @date 2021/9/12
  */
@@ -73,6 +74,28 @@ public class leetcode_206_ReverseList {
         return prev;
     }
 
+    /**
+     * 递归实现反转链表
+     * 假设链表 n1 n2 n3 ......nk nk+1......nm
+     * 此时已经将反转到 n1->n2->n3 ....nk->nk+1<-....nm
+     * 此时节点正在nk,要让nk+1指向nk就只能是
+     * nk.next.next =head
+     * nk.next =null
+     *
+     * @param head
+     * @return
+     */
+    public static ListNode reverseList3(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode nHead = reverseList3(head.next);
+        head.next.next = head;
+        head.next = null;
+        return nHead;
+    }
+
+
     // 测试
     public static void main(String[] args) {
         ListNode n1 = new ListNode(1);
@@ -80,7 +103,7 @@ public class leetcode_206_ReverseList {
         ListNode n3 = new ListNode(3);
         n1.next = n2;
         n2.next = n3;
-        ListNode res = reverseList1(n1);
+        ListNode res = reverseList3(n1);
         while (res != null) {
             System.out.println(res.val);
             res = res.next;

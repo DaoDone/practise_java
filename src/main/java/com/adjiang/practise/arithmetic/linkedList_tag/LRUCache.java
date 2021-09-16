@@ -54,7 +54,7 @@
 // Related Topics 设计 哈希表 链表 双向链表
 // 👍 1622 👎 0
 
-package com.adjiang.practise.arithmetic;
+package com.adjiang.practise.arithmetic.linkedList_tag;
 
 import com.adjiang.practise.common.DLinkedNode;
 
@@ -111,7 +111,6 @@ class LRUCache {
             node.v = value;
             moveToHead(node);
         }
-
     }
 
     private void addToHead(DLinkedNode node) {

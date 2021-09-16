@@ -1,4 +1,4 @@
-package com.adjiang.practise.arithmetic;
+package com.adjiang.practise.arithmetic.linkedList_tag;
 
 import com.adjiang.practise.common.ListNode;
 

@@ -3,6 +3,8 @@ package com.adjiang.practise.arithmetic;
 import com.adjiang.practise.common.ListNode;
 
 /**
+ * 删除链表倒数第n个节点
+ * diffculty:mediu
  * @author jianad001
  * @date 2021/9/16
  */

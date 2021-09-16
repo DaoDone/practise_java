@@ -100,9 +100,9 @@ class LRUCache {
             cache.put(key, node);
             //如果添加的元素导致容量溢出
             if (++size > capacity) {
-                //移除最少使用的尾部节点,并从cache移除
-                DLinkedNode tail = removeTail();
-                cache.remove(tail.k);
+                //移除最少使用的尾部节点,并从cache移除，oldTailPrev 是被移除的尾部节点
+                DLinkedNode oldTailPrev = removeTail();
+                cache.remove(oldTailPrev.k);
                 //并且size要减一，精确保持元素个数
                 size--;
             }
@@ -137,6 +137,10 @@ class LRUCache {
         addToHead(node);
     }
 
+    /**
+     * 超级重点
+     * @return
+     */
     private DLinkedNode removeTail() {
         //先取出最后一个节点
         DLinkedNode res = tail.prev;

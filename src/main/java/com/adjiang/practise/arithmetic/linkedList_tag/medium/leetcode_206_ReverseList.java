@@ -55,8 +55,7 @@ public class leetcode_206_ReverseList {
 
     /**
      * 利用双指针思路，
-     * prev比curr指针慢走一步
-     * prev和curr走之前，先要将curr指针指向prev节点
+     * prev指针指，先要将curr指针指向prev节点
      * curr每走一步，先要赋值给prev
      *
      * @param head
@@ -71,6 +70,7 @@ public class leetcode_206_ReverseList {
             prev = curr;
             curr = tmp;
         }
+
         return prev;
     }
 

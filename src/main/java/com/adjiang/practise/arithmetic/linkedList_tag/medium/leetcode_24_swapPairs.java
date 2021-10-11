@@ -7,7 +7,7 @@ import com.adjiang.practise.common.ListNode;
  * @author jianad001
  * @date 2021/9/17
  */
-public class leetCode_24_swapPairs {
+public class leetcode_24_swapPairs {
 
 
     /**

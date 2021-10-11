@@ -8,7 +8,7 @@ import com.adjiang.practise.common.ListNode;
  * @author jianad001
  * @date 2021/9/16
  */
-public class leetCode_19_removeNthFromEnd {
+public class leetcode_19_removeNthFromEnd {
 
     /**
      * 方法一；先走完一个一遍链表得链表长度

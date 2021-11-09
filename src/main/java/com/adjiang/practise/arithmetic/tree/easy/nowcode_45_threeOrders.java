@@ -1,8 +1,7 @@
-package com.adjiang.practise.binarytress.easy;
+package com.adjiang.practise.arithmetic.tree.easy;
 
 import com.adjiang.practise.common.TreeNode;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.JSONWriter;
 
 import java.util.ArrayList;
 import java.util.List;
